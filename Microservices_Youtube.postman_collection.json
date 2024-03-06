@@ -1,0 +1,702 @@
+{
+	"info": {
+		"_postman_id": "4c4e479c-e877-4bcd-8806-efdcbb9ee110",
+		"name": "Microservices_Youtube",
+		"description": "This is Microservices Tutorial Learnings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15043720"
+	},
+	"item": [
+		{
+			"name": "Quiz",
+			"item": [
+				{
+					"name": "Add New Quiz",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"PHP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/quiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"quiz"
+							]
+						},
+						"description": "In This api Added New Quiz"
+					},
+					"response": [
+						{
+							"name": "Quiz Added",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"PHP\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:23:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"title\": \"PHP\",\n    \"questions\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Quiz",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/quiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"quiz"
+							]
+						},
+						"description": "In This API get all the quiz sections."
+					},
+					"response": [
+						{
+							"name": "All Quiz",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:24:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Java\",\n        \"questions\": [\n            {\n                \"questionId\": 1,\n                \"question\": \"What is Java?\",\n                \"quizId\": 1\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Python\",\n        \"questions\": [\n            {\n                \"questionId\": 2,\n                \"question\": \"What is Java?\",\n                \"quizId\": 2\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"title\": \"PHP\",\n        \"questions\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Quiz By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/quiz/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"quiz",
+								"1"
+							]
+						},
+						"description": "In This API I get the Quiz Title as per Id."
+					},
+					"response": [
+						{
+							"name": "Quiz By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/quiz/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"quiz",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:24:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Java\",\n    \"questions\": [\n        {\n            \"questionId\": 1,\n            \"question\": \"What is Java?\",\n            \"quizId\": 1\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Added Some Questions On Specific Quiz Topic"
+		},
+		{
+			"name": "Question",
+			"item": [
+				{
+					"name": "Add New Question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\":\"What is Java?\",\r\n    \"quizId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"question"
+							]
+						},
+						"description": "In This API have added new Questions as Quiz Topic."
+					},
+					"response": [
+						{
+							"name": "PHP Added",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"question\":\"What is PHP?\",\r\n    \"quizId\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/question",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:25:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"questionId\": 3,\n    \"question\": \"What is PHP?\",\n    \"quizId\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Question",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"question"
+							]
+						},
+						"description": "From This API try to fetch all the questions with quiz id."
+					},
+					"response": [
+						{
+							"name": "All Question",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/question",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:25:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"questionId\": 1,\n        \"question\": \"What is Java?\",\n        \"quizId\": 1\n    },\n    {\n        \"questionId\": 2,\n        \"question\": \"What is Java?\",\n        \"quizId\": 2\n    },\n    {\n        \"questionId\": 3,\n        \"question\": \"What is PHP?\",\n        \"quizId\": 3\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Quiz  By Id From Questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/question/quiz/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"question",
+								"quiz",
+								"1"
+							]
+						},
+						"description": "This is Internal calling api from one service to another service data."
+					},
+					"response": [
+						{
+							"name": "Quiz By Question API",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/question/quiz/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"question",
+										"quiz",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:26:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"questionId\": 1,\n        \"question\": \"What is Java?\",\n        \"quizId\": 1\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Api Gateway",
+			"item": [
+				{
+					"name": "Get All Quiz By Gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/quiz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"quiz"
+							]
+						},
+						"description": "Get all Quiz Section from Gateway"
+					},
+					"response": [
+						{
+							"name": "All Quiz By Gateway",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/quiz",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:27:28 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Java\",\n        \"questions\": [\n            {\n                \"questionId\": 1,\n                \"question\": \"What is Java?\",\n                \"quizId\": 1\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Python\",\n        \"questions\": [\n            {\n                \"questionId\": 2,\n                \"question\": \"What is Java?\",\n                \"quizId\": 2\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"title\": \"PHP\",\n        \"questions\": [\n            {\n                \"questionId\": 3,\n                \"question\": \"What is PHP?\",\n                \"quizId\": 3\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Questions By Gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/question",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"question"
+							]
+						},
+						"description": "Get all Questions as per given Quiz from gateway."
+					},
+					"response": [
+						{
+							"name": "Questions From Gateway",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/question",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:27:45 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"questionId\": 1,\n        \"question\": \"What is Java?\",\n        \"quizId\": 1\n    },\n    {\n        \"questionId\": 2,\n        \"question\": \"What is Java?\",\n        \"quizId\": 2\n    },\n    {\n        \"questionId\": 3,\n        \"question\": \"What is PHP?\",\n        \"quizId\": 3\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Quiz By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/quiz/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"quiz",
+								"1"
+							]
+						},
+						"description": "Get Quiz as per Id from api Gateway"
+					},
+					"response": [
+						{
+							"name": "Quiz By Id From Gateway",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/quiz/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"quiz",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:28:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Java\",\n    \"questions\": [\n        {\n            \"questionId\": 1,\n            \"question\": \"What is Java?\",\n            \"quizId\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Questions By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/question/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"question",
+								"1"
+							]
+						},
+						"description": "Get questions by id from api Gateway"
+					},
+					"response": [
+						{
+							"name": "Questions By Id From Gateway",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/question/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"question",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Mar 2024 20:28:45 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"questionId\": 1,\n    \"question\": \"What is Java?\",\n    \"quizId\": 1\n}"
+						}
+					]
+				}
+			],
+			"description": "This is the Gateway for any api's which have to route from here only."
+		}
+	]
+}
